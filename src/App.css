@@ -1,38 +1,947 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap');
+ .link{
+  text-decoration: none;
+  color: black;
+ }
+
+.NavBar{
+  width: 100%;
+  height: 50px;
+  background-color: #032d6b;
+  font-family: Mulish;
+  font-size: 12px;
+  font-weight:600;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color:  rgb(210, 210, 214);
+}
+.responsive-nav{
+  display: none;
+}
+.links:hover{
+transform:translateY(10px)
+}
+.logo{
+  width: 75px;
+  height: 28px;
+}
+
+.dropdown-content{
+  display: none;
+  height:fit-content;
+  width:fit-content;
+  position: absolute;
+  cursor: pointer;
+  top: 23px;
+  left: 5%;
+  z-index: 1;
+  border: 1px solid white;
+  border-radius: 5px;
+  /* background-color: #f1f1f1; */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.course:hover{
+  cursor: pointer;
+  text-decoration: underline #f96b24 3px;
+}
+.course:hover .dropdown-content{
+  display: block;
+}
+.content{
+  height: 500px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start ;
+  justify-content: space-evenly;
+  background-color: white;
+  color: black;
+
+}
+
+.content div h2{
+  font-size: 19px;
+  /* font-size: 400; */
+  line-height: 8px;
+}
+.content span{
+  font-size: 13px;
+}
+.cards{
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* column-gap: 20px; */
+}
+
+.experience-card{
+  height: 300px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  letter-spacing: 1px;
+  align-items: center;
+  border-radius: 10px;
+  /* background-color:white ; */
+  border: 1px solid black;
+}
+.one{
+  border: 2px solid whitesmoke;
+}
+.experience-card:hover{
+  background-color: #fed5bf;
+  box-shadow: 0px 8px 16px 5px rgba(0,0,0,0.2);
+}
+.one h1{
+  font-size: 25px;
+}
+.two h1{
+  font-size: 25px;
+}
+.one h1:hover{
+  color: #f9601e;
+}
+.two{
+  border: 1px solid greenyellow;
+}
+
+.two h1{
+  color: green;
+}
+.carrier_camp{
+  height: 30px;
+  width: 134px;
+}
+.login-btn{
+  padding: 8px 24px;
+  margin: 5px;
+  font-size: 13px;
+  letter-spacing: .3px;
+  min-height: 32px;
+  background-color: #feeee5;
+  color: #f9601e;
+
+  box-sizing: border-box;
+  position: relative;
+  /* -webkit-user-select: none; */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
   text-align: center;
+  overflow: visible;
+  /* margin: 0; */
+  min-width: 64px;
+  line-height: 22px;
+  border-radius: 6px;
+  /* padding: 0 24px; */
+  /* min-height: 32px; */
+  font-family: Mulish,Roboto,Helvetica Neue,sans-serif;
+    /* font-size: 16px; */
+    font-weight: 600;
+}
+.login-btn:hover{
+  background-color: #fed5bf
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.enrol-btn{
+  padding: 12px 24px;
+  margin: 5px;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: .3px;
+  width: fit-content;
+  min-height: 32px;
+  box-sizing: border-box;
+    position: relative;
+    /* -webkit-user-select: none; */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    /* display: inline-block; */
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    overflow: visible;
+    /* margin: 0; */
+    min-width: 64px;
+    line-height: 22px;
+    border-radius: 6px;
+    background-image: linear-gradient(90deg,#f96b24 0%,#ff9100 100%);
+    font-family: Mulish,Roboto,Helvetica Neue,sans-serif;
+    /* font-size: 16px; */
+    font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.enrol-btn:hover{
+  background-image: linear-gradient(270deg,#f96b24 0%,#ff9100 100%)}
+
+
+  .nav-bg {
+    --bs-bg-opacity: 1;
+    background-color:#032d6b;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*css for community hover  */
+.drop-list{
+  font-size: 14px;
+  font-weight: 900;
+  position: relative;
+  z-index: 2;
+  font-family: Mulish;
+  line-height: 22px;
+}
+.drop-list:hover{
+  background-color: whitesmoke;
+}
+
+.content-sponsor{
+  height: fit-content;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background:white;
+  align-items:flex-start ;
+  /* justify-content: space-evenly; */
+  color: black;
+}
+
+.event-list{
+  display: block;
+  height:fit-content;
+  width:fit-content;
+  position: relative;
+  top: 0px;
+  right: 30%;
+  z-index: 2;
+  cursor: pointer;
+  margin-bottom: 40px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.events:hover .event-list{
+  display: block;
+}
+
+.event-tab{
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+.upcoming-event{
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  column-gap: 10px;  
+}
+.event-card{
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  width: 420px;
+  row-gap: 10px;
+  column-gap: 10px;
+  flex-wrap: wrap;
+
+}
+.event-text{
+  font-size: 12px;
+  font-family: Mulish;
+  font-weight:700;
+  line-height: 16px;
+}
+.event-card div{
+  height: 100px;
+  width: 200px;
+  /* background-color: #f9601e; */
+  border-radius: 5px;
+  font-family: Mulish;
+  border: 1px solid black;
+}
+.event-card div P{
+  opacity: 0.5;
+}
+.event-card div:hover{
+  box-shadow: 0px 5px 4px #f9601e;
+}
+.event-card div img{
+  height: 80%;
+  width: 100%;
+}
+.past-event{
+  height: fit-content;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.past-event div p:hover{
+  font-size: 12px;
+  font-family: Mulish;
+  text-decoration: underline 2px #f9601e;
+  color: #f9601e;
+  transition: ease-in;
+}
+.view-more-btn{
+  font-family: Mulish;
+  color: #f9601e;
+  text-decoration: underline 2px #f9601e;
+}
+
+
+/* css for practice dropdown */
+.practice-dropdown{
+  display: none;
+  height:fit-content;
+  width:180px;
+  position: absolute;
+  top: 23px;
+  left: 5%;
+  z-index: 2;
+  background-color:white; 
+  cursor: pointer;
+
+  border: 1px solid white;
+  border-radius: 5px;
+  /* background-color: #f1f1f1; */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  /* z-index: 1; */
+  color: black;
+}
+.practice-dropdown div{
+  opacity: 1;
+  margin: 10px 10px 20px;
+  position: relative;
+
+}
+.practice-dropdown div:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f96b24;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.practice-dropdown div:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.practice-dropdown hr{
+width: 40%;
+background-image: linear-gradient(270deg,#f96b24 0%,#ff9100 100%);
+height: 2px;
+border: none;
+opacity: 1;
+}
+
+.practice:hover .practice-dropdown{
+  display: block;
+}
+
+/* css for Login Page */
+.login{
+  height: fit-content;
+  width: 400px;
+  display: flex;
+  position: absolute;
+  top: 70px;
+  left: 30%;
+  z-index: -1;
+  flex-direction: column;
+  border: 1px solid black;
+  align-items: center;
+  /* margin:10px auto; */
+  row-gap: 10px;
+}
+.login span{
+  margin-left: 60px;
+}
+.login div{
+  height: 50px;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: Mulish;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin-bottom: 3px;
+}
+.login div:hover{
+  background-color: lightgreen;
+  border: none;
+  margin-bottom: 10px;
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
+.login div span{
+  opacity: 0.6;
+}
+.login p{
+  text-decoration: underline dashed;
+}
+.login form{
+  display: flex;
+  flex-direction: column;
+  row-gap:10px;
+}
+.login form button:hover{
+  border: 2px solid #f9601e ;
+  font-size: 16px;
+  color:#f1f1f1;
+  border-radius: 5px;
+  font-weight: lighter;
+  transform: translateY(-10px);
+  transition-duration: .3s;
+  transition-timing-function: linear;
+  background-color: #f9601e;
+}
+.login form input{
+  font-weight:lighter;
+  width:100%;
+  border: none;
+  border-bottom:2px solid lightgrey;
+}
+.login form input:hover{
+  font-weight:lighter;
+  width:100%;
+  border: none;
+  border-bottom:2px solid orangered;
+}
+
+/* css for Logout page */
+.logout{
+  height: 100%;
+  width: 100%;
+  /* margin: auto; */
+  position: fixed;
+  z-index: -2;
+  background-image: linear-gradient(270deg,#f96b24 0%,#ff9100 100%);
+}
+.logout form{
+  height: fit-content;
+  width: 50%;
+  border: 1px solid rgb(255, 242, 242);
+  background-color: orangered;
+  display: flex;
+  flex-wrap: wrap;
+  color: #fed5bf;
+  flex-direction: column;
+  align-items: center;
+  margin: 3% auto;
+  font-family: Mulish;
+  position: relative;
+  top: 0px;
+  left:0px ;
+  z-index: -1;
+  /* box-shadow: 5px 5px 10px grey; */
+}
+.logout form input{
+  border: none;
+  opacity: .8;
+  border-bottom: 2px solid grey;
+  margin-bottom: 3px;
+  border-radius: 5px;
+}
+.logout form input:hover{
+  opacity: 1;
+}
+.logout form button{
+  border: 1px solid black;
+  margin-bottom: 3px;
+  border-radius: 5px;
+}
+
+/* css for login dropdown */
+.login-dropdown{
+  height: 100px;
+  width: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border: 1px solid black;
+}
+.logout-btn{
+cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: none;
+}
+
+/* css for course cards */
+
+.course-card{
+  height: 200px;
+  width: 370px;
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  margin: 20px 20px 30px ;
+  font-family: Mulish;
+}
+.course-card:hover{
+  border: 3px solid  lightgreen;
+}
+.card-1{
+display: grid;
+grid-template-columns:5fr 1fr;
+font-size: 15px;
+background-color: rgb(245,247,247);
+}
+.card-1 div{
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-left: 10px;
+}
+.card-1 img{
+margin: auto;
+}
+
+.card-2{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  justify-content: center;
+font-weight: lighter ;
+}
+
+/* css for enroll page */
+.enroll-bg-img{
+  width: 100%;
+}
+.enroll-bg{
+  height: fit-content;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color: white;
+  top: 20%;
+  left: 10%;
+  font-family: Mulish;
+
+}
+.enroll-btn{
+  width: 100%;
+  display: flex;
+  column-gap: 10px;
+}
+.btn-1{
+  width: 45%;
+  height: 50px;
+  color: white;
+  background-image: linear-gradient(90deg,#f96b24 0%,#ff9100 100%);
+  border-radius: 10px;
+  border: none;
+}
+.btn-1:hover{
+  background-image: linear-gradient(90deg,#ec6928 0%,#ff9100 100%);
+
+}
+.btn-2{
+  width: 45%;
+  height: 50px;
+  display: inline-block;
+  color: white;
+  background-color: rgb(255,241,234);
+  border-radius: 10px;
+  color: orangered;
+  border: none;
+}
+.btn-2:hover{
+  background-color: rgb(248, 236, 231);
+}
+
+.no-work{
+  /* display: none; */
+}
+/* .no-work-ex:hover .no-work{
+display: block;
+} */
+
+/* .work-ex{
+  display: none;
+} */
+
+/* .work-exp:hover .work-ex{
+  display: block;
+} */
+.course-flex{
+  height: fit-content;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid red; */
+  overflow-y:scroll ;
+}
+.course-container{
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  /* overflow-y: scroll; */
+}
+.course-flex::-webkit-scrollbar{
+  display: none;
+}
+
+.course-section{
+  height: fit-content;
+  width: 100vw;
+  display: flex;
+  row-gap: 25px;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+/* css for Detail Comp */
+
+.detail-section{
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  font-family: Mulish;
+  grid-template-columns: 2fr 1fr;
+  border:1px solid black;
+  background-color: rgb(47,21,76);
+
+}
+.detail-area{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  align-items: flex-start;
+  justify-content: flex-start;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.detail-area p img{
+height: 30px;
+width: 150px;
+}
+.detail-area hr{
+  background-color: grey;
+  width: 50vw;
+}
+.mini-details{
+  display: flex;
+  column-gap: 30px;
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* css for course price section */
+.price-section{
+  height: fit-content;
+  width: 80vw;
+  background-color: rgb(47,21,76);
+  margin:30px auto;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  border-radius: 10px;
 }
+.price-flex{
+  height: fit-content;
+  width: 100%;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+  font-family: Mulish;
+}
+.price-flex-card{
+  height: 150px;
+  color: black;
+  background-color: white;
+  width: 400px;
+  border-radius: 10px;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.price-flex-card:hover{
+  box-shadow: 0px 8px 3px orangered;
+}
+.price-flex-card h6:hover{
+  color: #f9601e !important;
+  text-decoration: underline;
+  cursor: pointer;
+
+}
+.price-flex-card h5{
+  color: white !important;
+  background-color: red;
+  border-radius: 7px;
+}
+.pay-detail{
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+}
+
+.payment-gateway{
+  height: 100vh;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  margin: auto;
+}
+/* Media Query */
+
+  @media (min-width:350px) and (max-width:500px){
+    .responsive-nav{
+      display: block;
+    }
+    .course{
+      color: white;
+    }
+    .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+      color: white;
+  }
+  
+  .nav-link:focus, .nav-link:hover {
+      color: white;
+  }
+    .nav-bg {
+      --bs-bg-opacity: 1;
+      background-color:#032d6b !important;
+  }
+  .nav-link {
+    display: block;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    color: white;
+    text-decoration: none;
+    background: 0 0;
+    border: 0;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    font-family: Mulish;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+    .NavBar{
+      display: none;
+    }
+
+    .dropdown-content{
+      display: none;
+      height:fit-content;
+      width:fit-content;
+      position: absolute;
+      cursor: pointer;
+      top: 25px;
+      left: 0;
+      border: 1px solid white;
+      border-radius: 5px;
+      /* background-color: #f1f1f1; */
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index:1;
+      background-color: white;
+    }
+    .content{
+      height: fit-content;
+      width: fit-content;
+      margin: 20px 0px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items:flex-start ;
+      justify-content: space-evenly;
+      color: black;
+    
+    }
+    .content div h2{
+      font-size: 19px;
+      /* font-size: 400; */
+      /* line-height: 8px; */
+    }
+    .content span{
+      font-size: 13px;
+    }
+    .cards{
+      height: fit-content;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 10px;
+      justify-content: space-evenly;
+      /* column-gap: 20px; */
+    }
+    .login-btn{
+      position:unset;
+    }
+    .enrol-btn{
+      position: unset;
+    }
+    
+    .experience-card{
+      height: 300px;
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      letter-spacing: 1px;
+      align-items: center;
+      border-radius: 10px;
+      /* background-color:white ; */
+      border: 1px solid black;
+    }
+    .one h1{
+      font-size: 25px;
+    }
+    .two h1{
+      font-size: 25px;
+    }
+    .one{
+      border: 2px solid whitesmoke;
+    }
+    .experience-card:hover{
+      background-color: #fed5bf;
+      box-shadow: 0px 8px 16px 5px rgba(0,0,0,0.2);
+    }
+    .one h1:hover{
+      color: #f9601e;
+    }
+    .two{
+      border: 1px solid greenyellow;
+    }
+    
+    .two h1{
+      color: green;
+    }
+
+    /*css for community-event hover  */
+    .event-list{
+      display: none;
+      height:fit-content;
+      width:90vw;
+      position: relative;
+      top: 0px;
+      right: 0%;
+      z-index: 2;
+      cursor: pointer;
+      margin-bottom: 10px;
+      border: 1px solid white;
+      border-radius: 5px;
+      background-color: #f1f1f1;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    .events:hover .event-list{
+      display: block;
+    }
+    
+    .event-tab{
+      height: fit-content;
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+    }
+    .upcoming-event{
+      height: fit-content;
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      column-gap: 10px;  
+    }
+    .event-card{
+      display: flex;
+      flex-direction: row;
+      height: fit-content;
+      width: 100vw;
+      overflow: hidden;
+      row-gap: 10px;
+      column-gap: 10px;
+      flex-wrap: wrap;
+    
+    }
+    .event-text{
+      font-size: 12px;
+      font-family: Mulish;
+      font-weight:700;
+      line-height: 16px;
+    }
+    .event-card div{
+      height: 100px;
+      width: 200px;
+      /* background-color: #f9601e; */
+      border-radius: 5px;
+      font-family: Mulish;
+      border: 1px solid black;
+      overflow: hidden;
+    }
+    .event-card div P{
+      opacity: 0.5;
+      font-size: 11px;
+    }
+    .event-card div:hover{
+      box-shadow: 0px 5px 4px #f9601e;
+    }
+    .event-card div img{
+      height: 80%;
+      width: 100%;
+    }
+    
+    /* css for login page */
+    .login{
+      height: fit-content;
+      width: 400px;
+      display: flex;
+      position: absolute;
+      top: 70px;
+      left: 5%;
+      z-index: -1;
+      flex-direction: column;
+      border: 1px solid black;
+      align-items: center;
+      /* margin:10px auto; */
+      row-gap: 10px;
+    }
+
+  }
