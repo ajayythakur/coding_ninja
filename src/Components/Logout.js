@@ -10,7 +10,7 @@ const Logout = () => {
     const [age,setAge]=useState('');
     const [password,setPassword]=useState('');
     const [phone,setPhone]=useState('');
-
+ 
     const navigate=useNavigate();
 
     const submitFn=async(e)=>{

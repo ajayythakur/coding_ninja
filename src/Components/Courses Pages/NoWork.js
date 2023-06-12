@@ -34,7 +34,7 @@ const NoWork = () => {
                             <div><img src={n.project_img}/>{n.projects}</div>
                             <div>4.8<img style={{width:'90px'}} src={n.rating} />({n.enrolled})</div>
                         </div>
-
+ 
                     </div>
                     </Link>
                 )

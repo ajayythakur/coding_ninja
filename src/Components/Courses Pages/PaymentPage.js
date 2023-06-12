@@ -6,6 +6,7 @@ import axios from 'axios';
 
 
 const PaymentPage = () => {
+  // eslint-disable-next-line
   const [auth,setAuth]=useAuth();
   const [order,setOrder]=useOrder();
   const [clientToken, setClientToken]=useState('')
@@ -32,9 +33,10 @@ const PaymentPage = () => {
     try {
       setLoading(true)
       const{nonce}=await instance.requestPaymentMethod()
+      // eslint-disable-next-line
       const {data} = await axios.post('http://localhost:8080/braintree/payment',{
         nonce,order
-      })
+      }) 
       setLoading(false)
       localStorage.removeItem('order')
       setOrder([]);
@@ -60,7 +62,7 @@ const PaymentPage = () => {
           <button onClick={handlePayment}
           
           >
-          {loading ? 'Processing...' : 'Make Payment'}
+          {loading ? 'Processing' : 'Make Payment'}
         </button>
             </>
           )

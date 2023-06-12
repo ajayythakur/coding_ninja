@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import {useAuth} from './context/auth'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const LogIn = () => {
@@ -31,7 +31,7 @@ const LogIn = () => {
       }
     } catch (error) {
       console.log('Error in login',error)
-    }
+    } 
   }
   return (
     <div>
