@@ -15,7 +15,7 @@ const PaymentPage = () => {
 
   const getToken = async()=>{
     try {
-      const {data}=await axios.get('http://localhost:8080/braintree/token')
+      const {data}=await axios.get('https://backend-coding-ninja3.onrender.com/braintree/token')
       // alert("Redirecting to payment page");
       console.log(data)
       setClientToken(data?.clientToken)
@@ -34,7 +34,7 @@ const PaymentPage = () => {
       setLoading(true)
       const{nonce}=await instance.requestPaymentMethod()
       // eslint-disable-next-line
-      const {data} = await axios.post('http://localhost:8080/braintree/payment',{
+      const {data} = await axios.post('https://backend-coding-ninja3.onrender.com/braintree/payment',{
         nonce,order
       }) 
       setLoading(false)
