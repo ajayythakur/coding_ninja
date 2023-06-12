@@ -13,8 +13,8 @@ const LogIn = () => {
   const submitHandler=async(e)=>{
     e.preventDefault();
     console.log(email,password)
-    try { 
-      const res=await axios.post("http://localhost:8080/login",{
+    try {
+      const res=await axios.post("https://backend-coding-ninja3.onrender.com/login",{
         email,
         password
       });

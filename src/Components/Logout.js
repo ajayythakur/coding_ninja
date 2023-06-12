@@ -16,7 +16,7 @@ const Logout = () => {
     const submitFn=async(e)=>{
         e.preventDefault();
         try {
-            const details=await axios.post('http://localhost:8080/register',{
+            const details=await axios.post('https://backend-coding-ninja3.onrender.com/register',{
                 name,
                 last_name,
                 email,
