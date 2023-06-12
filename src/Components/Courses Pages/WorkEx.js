@@ -25,14 +25,14 @@ data.map((n,index)=>{
                 <div style={{opacity:'.6'}}>{n.type}</div>
                 <div><h5>{n.name}</h5></div>
                 </div>
-                <img  src={n.image} alt='404 course-image' />
+                <img  src={n.image} alt='404 course' />
                 </div>
             <div className='card-2'>
                 <div>
-                    <img alt='404 course-image' src={n.time_img} />{n.time}  
+                    <img alt='404 course' src={n.time_img} />{n.time}  
                 </div>
-                <div><img alt='404 course-image' src={n.project_img}/>{n.projects}</div>
-                <div>4.8<img style={{width:'90px'}} src={n.rating} />({n.enrolled})</div>
+                <div><img alt='404 course' src={n.project_img}/>{n.projects}</div>
+                <div>4.8<img alt='404' style={{width:'90px'}} src={n.rating} />({n.enrolled})</div>
             </div>
 
         </div>

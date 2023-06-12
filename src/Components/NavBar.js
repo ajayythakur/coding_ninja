@@ -125,7 +125,7 @@ const NavBar = () => {
         <div><button className='enrol-btn'><Link to='/enroll'>Enrol Now</Link></button></div>
     </div>
 
-
+ 
 
 
 

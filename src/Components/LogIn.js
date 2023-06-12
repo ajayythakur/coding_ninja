@@ -13,7 +13,7 @@ const LogIn = () => {
   const submitHandler=async(e)=>{
     e.preventDefault();
     console.log(email,password)
-    try {
+    try { 
       const res=await axios.post("http://localhost:8080/login",{
         email,
         password

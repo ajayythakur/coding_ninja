@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import blueBg from '../Images/blueBg.png'
-import { Link } from 'react-router-dom';
 import NoWork from './Courses Pages/NoWork';
 import WorkEx from './Courses Pages/WorkEx';
 
 
 const Enroll = () => {
+    // eslint-disable-next-line
     const[data,setData]=useState([]);
 
     useEffect(()=>{
@@ -14,7 +14,7 @@ const Enroll = () => {
         .then((res)=>setData(res.data))
         .catch(err=>console.log(err));
     },[])
-
+ 
     // console.log(data);
   return (
     <div>
