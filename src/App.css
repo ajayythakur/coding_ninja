@@ -1100,14 +1100,15 @@ width: 150px;
 }
 
 .payment-gateway{
-  height: 50vh;
-  width: fit-content;
+  height: 50%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px solid black;
-  margin: auto;
+  margin:10% auto;
+  background-color: white;
 }
 
 /* CSS for classrom page */

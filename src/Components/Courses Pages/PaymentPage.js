@@ -3,6 +3,7 @@ import {useAuth} from '../context/auth'
 import DropIn from "braintree-web-drop-in-react"
 import { useOrder } from '../context/order';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
 const PaymentPage = () => {
@@ -12,6 +13,7 @@ const PaymentPage = () => {
   const [clientToken, setClientToken]=useState('')
   const [instance,setInstance]=useState('')
   const [loading,setLoading]=useState(false);
+  const navigate=useNavigate();
 
   const getToken = async()=>{
     try {
@@ -33,13 +35,16 @@ const PaymentPage = () => {
     try {
       setLoading(true)
       const{nonce}=await instance.requestPaymentMethod()
+      // https://backend-coding-ninja3.onrender.com/braintree
       // eslint-disable-next-line
-      const {data} = await axios.post('https://backend-coding-ninja3.onrender.com/braintree/payment',{
+      const {datas} = await axios.post(' https://backend-coding-ninja3.onrender.com/braintree/payment',{
         nonce,order
       }) 
       setLoading(false)
       localStorage.removeItem('order')
       setOrder([]);
+      alert("Problem")
+      navigate('/classroom_details' || '/home');
     } catch (error) {
       console.log(error)
       setLoading(false);
@@ -61,7 +66,7 @@ const PaymentPage = () => {
           <button onClick={handlePayment}
           
           >
-          {loading ? 'Processing' : 'Make Payment'}
+          {loading ? 'Done' : 'Make Payment'}
         </button>
             </>
           )
