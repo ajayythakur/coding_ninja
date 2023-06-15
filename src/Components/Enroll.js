@@ -11,7 +11,7 @@ const Enroll = () => {
 
     useEffect(()=>{
         // https://backend-coding-ninja3.onrender.com/course
-        axios.get('htttp://localhost:8080/course')
+        axios.get('https://backend-coding-ninja3.onrender.com/course')
         .then((res)=>setData(res.data))
         .catch(err=>console.log(err));
     },[])

@@ -8,8 +8,8 @@ const NoWork = () => {
     const[data,setData]=useState([]);
 
     useEffect(()=>{
-        //  https://backend-coding-ninja3.onrender.com
-        axios.get('http://localhost:8080/course')
+        // http://localhost:8080/course https://backend-coding-ninja3.onrender.com
+        axios.get('https://backend-coding-ninja3.onrender.com/course')
         .then((res)=>setData(res.data))
         .catch(err=>console.log(err));
     },[])

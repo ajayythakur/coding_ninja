@@ -10,7 +10,7 @@ const CallBackQueryForm = () => {
     const handleSubmit=async(e)=>{
         e.preventDefault();
         try {
-            const res=await axios.post('http://localhost:8080/callback',{
+            const res=await axios.post('https://backend-coding-ninja3.onrender.com/callback',{
                 first_name,
                 contact,
                 email,

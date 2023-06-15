@@ -1100,8 +1100,8 @@ width: 150px;
 }
 
 .payment-gateway{
-  height: 100vh;
-  width: 400px;
+  height: 50vh;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;

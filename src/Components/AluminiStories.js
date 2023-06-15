@@ -4,7 +4,7 @@ const AluminiStories = () => {
 const[data,setData]=useState([]);
 
 useEffect(()=>{
-    axios.get("http://localhost:8080/alumini_stories")
+    axios.get("https://backend-coding-ninja3.onrender.com/alumini_stories")
     .then((res)=>setData(res.data))
     .catch((error)=>console.log(error));
 },[])
