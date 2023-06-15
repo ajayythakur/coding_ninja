@@ -10,7 +10,8 @@ const Enroll = () => {
     const[data,setData]=useState([]);
 
     useEffect(()=>{
-        axios.get('https://backend-coding-ninja3.onrender.com/course')
+        // https://backend-coding-ninja3.onrender.com/course
+        axios.get('htttp://localhost:8080/course')
         .then((res)=>setData(res.data))
         .catch(err=>console.log(err));
     },[])
@@ -28,7 +29,7 @@ const Enroll = () => {
         <button className=' btn-1'>Browse Popular Course</button><button className=' btn-2'>Try for free</button></div>
         </div>
 
-        <div>
+        <div className='advt'>
             <img src='https://files.codingninjas.com/gsst-homepage_web-27881.svg' alt='404' />
         </div>
         <div className='course-section'>

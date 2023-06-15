@@ -7,13 +7,17 @@ import NoWork from '../Components/Courses Pages/NoWork'
 import WorkEx from '../Components/Courses Pages/WorkEx'
 import DetailComp from '../Components/Courses Pages/DetailComp'
 import PaymentPage from '../Components/Courses Pages/PaymentPage'
+import MyClasssroom from '../Components/MyClasssroom'
+import Dashboard from '../Components/Dashboard'
+import HomePage from '../Components/HomePage'
 
 const Routing = () => {
   return (
     <div>
         {/* <Link to='/login'>Login</Link> */}
         <Routes>
-            <Route path='*'></Route>
+            <Route path='*' element={<HomePage/>}/>
+            <Route path='/home' element={<HomePage/>}/>
             <Route path='/login' element={<LogIn/>}/>Login
             <Route path='/logout' element={<Logout/>} />
             <Route path='/enroll' element={<Enroll/>}/>
@@ -21,6 +25,9 @@ const Routing = () => {
             <Route path='/wrok-ex' element={<WorkEx/>} />
             <Route path='/course-detail' element={<DetailComp/>}/>
             <Route path='/payment-page' element={<PaymentPage/>}/>
+            <Route path='/classroom' element={<MyClasssroom/>} />
+            <Route path='/dashboard' element={<Dashboard/>} />
+
         </Routes>
     </div>
   )

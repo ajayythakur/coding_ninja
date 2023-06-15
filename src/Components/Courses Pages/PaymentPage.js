@@ -40,7 +40,6 @@ const PaymentPage = () => {
       setLoading(false)
       localStorage.removeItem('order')
       setOrder([]);
-
     } catch (error) {
       console.log(error)
       setLoading(false);
