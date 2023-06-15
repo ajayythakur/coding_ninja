@@ -1,3 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.page-wrapper {
+  /* padding-top: 5%; */
+  display: flex;
+  -webkit-display: flex;
+  justify-content: space-around;
+}
+
+/* // BEGIN CARD STYLES */
+.reveal-details img{
+  height: 30px;
+  display: none;
+
+}
+.reveal-details p{
+  display: none;
+}
+.card-wrapper {
+  background: white;  
+  /* height: 350px;  */
+  border-radius: 6px;
+  font-family: Mulish;
+  color: white;
+  background-color: rgb(117,51,183);
+  max-width: 200px;
+  overflow: hidden;
+  padding: 2rem;
+  width: 80%;  
+  transition: max-width 500ms ease-in-out;
+  
+  &:hover {
+    box-shadow: 0 0 8px #d3d3d3;    
+    cursor: pointer;
+    max-width: 600px;
+  }
+}
+.card-wrapper:hover .reveal-details p{
+  display: block;
+}
+.card-wrapper:hover .reveal-details img{
+  display: block;
+}
+
+.card-details,
+.reveal-details {
+  /* font-weight: 300; */
+  font-size: 12px;
+}
+.student-img{
+  height: 250px;
+  width: 90%;
+}
+.card-height-animate {
+  width: 300px; 
+}
+.story-flex{
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid black; */
+  flex-wrap: wrap;
+  row-gap: 10px;
+  overflow-Y: scroll;
+  justify-content: center
+  /* justify-content: fl; */
+
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap');
  .link{
   text-decoration: none;
@@ -771,6 +849,20 @@ opacity: 1;
 }
 
 /* css for login dropdown */
+.login-dropdown-content{
+  display: none;
+  height:fit-content;
+  width:fit-content;
+  position: absolute;
+  cursor: pointer;
+  top: 33px;
+  left: 5%;
+  z-index: 1;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: greenyellow;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
 .login-dropdown{
   height: 100px;
   width: 100px;
@@ -787,6 +879,9 @@ cursor: pointer;
 a{
   text-decoration: none;
   color: none;
+}
+.nav-login:hover .login-dropdown-content{
+  display: block;
 }
 
 /* css for course cards */
@@ -873,10 +968,6 @@ font-weight: lighter ;
 }
 .btn-2:hover{
   background-color: rgb(248, 236, 231);
-}
-
-.no-work{
-  /* display: none; */
 }
 /* .no-work-ex:hover .no-work{
 display: block;
@@ -1443,7 +1534,20 @@ color: #f1f1f1;
   height: 50%;
   width: 100%;
 }
-
+.login-dropdown-content{
+  display: none;
+  height:fit-content;
+  width:fit-content;
+  position: absolute;
+  cursor: pointer;
+  top: 77%;
+  left: 3%;
+  z-index: 1;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
   }
 
   @media (min-width:501px) and (max-width:850px){
@@ -1816,6 +1920,20 @@ color: #f1f1f1;
     .classroom div img {
       height: 50%;
       width: 100%;
+  }
+  .login-dropdown-content{
+    display: none;
+    height:fit-content;
+    width:fit-content;
+    position: absolute;
+    cursor: pointer;
+    top: 77%;
+    left: 3%;
+    z-index: 1;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   }
     
       }

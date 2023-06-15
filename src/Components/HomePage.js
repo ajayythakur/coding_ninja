@@ -7,9 +7,10 @@ import WorkEx from '../Components/Courses Pages/WorkEx'
 import NoWork from './Courses Pages/NoWork';
 import CallBackQueryForm from './CallBackQueryForm';
 import Footer from './Footer';
+import AluminiStories from './AluminiStories';
 
 
-const HomePage = () => {
+const HomePage = () => { 
   return (
     <div style={{backgroundColor:'rgb(250,247,242)'}}>
       <div className='intro-div'>
@@ -62,6 +63,8 @@ const HomePage = () => {
                   </div>
                 </div>
         </div>
+
+        {<AluminiStories/>}
 
         <div className='why-img'>
           <img src={hompageImg} alt='404' />
