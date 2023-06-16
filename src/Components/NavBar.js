@@ -120,13 +120,13 @@ const NavBar = () => {
           {
             !auth?.user ? (<Link to='/login'>Login</Link>) :
               (<>
-
+ 
                 <span className='links nav-login'>{auth?.user.name}
                   <div className='login-dropdown-content'>
                     <div className='login-dropdown'>
 
                       <div className='logout-btn' onClick={handleLogout}>Logout</div>
-                      <div><Link className='link' to='/dashboard'>Dashboard</Link></div>
+                      {/* <div><Link className='link' to='/dashboard'>Dashboard</Link></div> */}
                     </div>
                   </div>
                 </span>
@@ -279,7 +279,7 @@ const NavBar = () => {
           <div className='login-dropdown'>
 
             <div className='logout-btn' onClick={handleLogout}>Logout</div>
-            <div><Link className='link' to='/dashboard'>Dashboard</Link></div>
+            {/* <div><Link className='link' to='/dashboard'>Dashboard</Link></div> */}
           </div>
         </div>
       </span> 

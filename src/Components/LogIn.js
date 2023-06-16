@@ -6,13 +6,19 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const LogIn = () => {
   const [email,setEmail]=useState('');
-  const [password,setPassword]=useState('');
+  const [password,setPassword]=useState(''); 
   const [auth,setAuth]=useAuth();
 const navigate=useNavigate();
   const submitHandler=async(e)=>{
-    e.preventDefault();
+    e.preventDefault(); 
     console.log(email,password)
     try {
+      if(email.length===0){
+        alert("Please Enter Valid Email")
+      }
+      if(password.length===0){
+        alert("Please enter a valid Password.Password length should be 8 contains UpperCase,Lowercase Letter,Numbers,Special Character(!,@,# etc)");
+      }
       const res=await axios.post("https://backend-coding-ninja3.onrender.com/login",{
         email,
         password
