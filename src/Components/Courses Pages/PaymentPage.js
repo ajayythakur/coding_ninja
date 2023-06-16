@@ -33,19 +33,24 @@ const PaymentPage = () => {
   // handle payments
   const handlePayment=async()=>{
     try {
+      console.log('payment started')
       setLoading(true)
-      const{nonce}=await instance.requestPaymentMethod()
-      // https://backend-coding-ninja3.onrender.com/braintree
-      // eslint-disable-next-line
-      const {datas} = await axios.post(' https://backend-coding-ninja3.onrender.com/braintree/payment',{
+      const{nonce}=await instance.requestPaymentMethod();
+      console.log('nonce=>',nonce)
+
+      navigate('/classroom' || '/home');
+      alert("Payment Complete")
+
+      const {datas} = await axios.post('https://backend-coding-ninja3.onrender.com/braintree/payment',{
         nonce,order
       }) 
+      console.log(datas)
+      if(datas){
       setLoading(false)
       localStorage.removeItem('order')
       setOrder([]);
-      alert("Problem")
-      navigate('/classroom_details' || '/home');
-    } catch (error) {
+      }
+    } catch (error) { 
       console.log(error)
       setLoading(false);
     }
@@ -63,10 +68,8 @@ const PaymentPage = () => {
             }}
             onInstance={instance=> setInstance(instance)}
           />
-          <button onClick={handlePayment}
-          
-          >
-          {loading ? 'Done' : 'Make Payment'}
+          <button onClick={handlePayment}>
+          {loading ? 'Processing' : 'Make Payment'}
         </button>
             </>
           )

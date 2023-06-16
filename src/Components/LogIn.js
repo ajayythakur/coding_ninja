@@ -1,15 +1,14 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import {useAuth} from './context/auth'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const LogIn = () => {
   const [email,setEmail]=useState('');
   const [password,setPassword]=useState('');
   const [auth,setAuth]=useAuth();
-
-  // const navigate=useNavigate();
+const navigate=useNavigate();
   const submitHandler=async(e)=>{
     e.preventDefault();
     console.log(email,password)
@@ -20,7 +19,7 @@ const LogIn = () => {
       });
       if(res){
         alert(`Welcome Ninja!`)
-        // navigate('/*')
+        navigate('/home')
         console.log("Login Successfully");
         setAuth({
           ...auth,
