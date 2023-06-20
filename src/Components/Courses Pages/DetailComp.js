@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useOrder } from '../context/order';
+import Footer from '../Footer';
 
 
 
@@ -75,7 +76,7 @@ const DetailComp = () => {
             </Link>
 
             </div>
-            
+             
         <div className='price-flex-card'>
         <h1>Standard</h1>
             <h5>
@@ -103,6 +104,46 @@ const DetailComp = () => {
         )
     })
 }
+
+<div className='placement-div'>
+          <h3>Our Students are placed at</h3>
+          <div className='placement-company'>
+          <img src='https://files.codingninjas.in/google-9542.svg' alt='404' />
+          <img src='https://files.codingninjas.in/microsoft-9541.svg' alt='404' />
+          <img src='https://files.codingninjas.in/adobe-9540.svg' alt='404' />
+          <img src='https://files.codingninjas.in/walmart-9539.svg' alt='404' />
+          <img src='https://files.codingninjas.in/amazon-9538.svg' alt='404' />
+          <img src='https://files.codingninjas.in/oyo-9537.svg' alt='404' />
+          <img src='https://files.codingninjas.in/flipkart-9536.svg' alt='404' />
+          <img src='https://files.codingninjas.in/morganstanley-9535.svg' alt='404' />
+          <img src='https://files.codingninjas.in/samsung-9534.svg' alt='404' />
+          <img src='https://files.codingninjas.in/expedia-9533.svg' alt='404' />
+          <img src='https://files.codingninjas.in/facebook-9532.svg' alt='404' />
+          </div>
+        </div>
+
+        <div className='review'>
+        <div>
+          <h1>4.9</h1>
+          <img src='https://files.codingninjas.in/stars-9613.svg' alt='404'/>
+          <p>100+ reviews</p>
+          <img src='https://files.codingninjas.in/fblogo-9599.svg' alt='404' />
+        </div>
+        <div>
+        <h1>4.9</h1>
+          <img src='https://files.codingninjas.in/stars-9613.svg' alt='404'/>
+          <p>1000+ reviews</p>
+          <img src='https://files.codingninjas.in/glogo-9600.svg' alt='404' />
+        </div>
+        <div>
+          <h1>50+</h1>
+        <img src='https://files.codingninjas.in/stars-9613.svg' alt='404'/>
+          <p>5000 answered</p>
+          <img src='https://files.codingninjas.in/qlogo-9611.svg' alt='404' />
+        </div>
+        </div>
+
+<Footer/>
 
     </div>
   )

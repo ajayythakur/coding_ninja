@@ -8,16 +8,16 @@ useEffect(()=>{
     .then((res)=>setData(res.data))
     .catch((error)=>console.log(error));
 },[])
-console.log(data);
+// console.log(data);
   return (
     <div className='story-flex'>
     {
         data.map((story,index)=>{
             return(
-                <div className="page-wrapper">  
+                <div key={index} className="page-wrapper">  
   <div className="card-wrapper">
     <div className="card-details">
-      <h3 className="card-title" key={index}>{story.info}</h3>
+      <h3 className="card-title" >{story.info}</h3>
       <br/> 
       </div>{/* end card-details */}
     <div className="reveal-details">
@@ -26,7 +26,7 @@ console.log(data);
       <img alt='404' src={story.company_logo}/>
     </div>{/* end reveal-details */}
       <img className='student-img' src={story.photo} alt='404' />
-    </div>
+    </div> 
     </div>
 
             )

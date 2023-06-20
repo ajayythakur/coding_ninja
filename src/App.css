@@ -85,7 +85,11 @@ body {
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap');
 
-.link {
+.link{
+  text-decoration: none;
+  color: white;
+}
+.link2{
   text-decoration: none;
   color: black;
 }
@@ -454,7 +458,6 @@ body {
   z-index: 5;
   border: 1px solid white;
   border-radius: 5px;
-  /* background-color: #f1f1f1; */
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -468,14 +471,16 @@ body {
 }
 
 .content {
-  height: 500px;
+  height: fit-content;
   width: 600px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  row-gap: 20px;
   justify-content: space-evenly;
   background-color: white;
   color: black;
+  padding: 20px;
 
 }
 
@@ -656,13 +661,13 @@ body {
 }
 
 .event-list {
-  display: block;
+  display: none;
   height: fit-content;
   width: fit-content;
   position: relative;
   top: 0px;
   right: 30%;
-  z-index: 2;
+  z-index: 4;
   cursor: pointer;
   margin-bottom: 40px;
   border: 1px solid white;
@@ -680,6 +685,8 @@ body {
   width: fit-content;
   display: flex;
   flex-direction: row;
+  background-color: white;
+
 }
 
 .upcoming-event {
@@ -1312,7 +1319,65 @@ display: block;
 /* Media Query */
 
 @media (min-width:350px) and (max-width:500px) {
+/* css for alumini stories */
+.page-wrapper {
+  /* padding-top: 5%; */
+  display: flex;
+  -webkit-display: flex;
+  justify-content: space-around;
+}
 
+/* // BEGIN CARD STYLES */
+.reveal-details img {
+  height: 30px;
+  display: none;
+
+}
+
+.reveal-details p {
+  display: none;
+}
+
+.card-wrapper {
+  background: white;
+  height: fit-content;
+  border-radius: 6px;
+  font-family: Mulish;
+  color: white;
+  background-color: rgb(117, 51, 183);
+  max-width: 499px;
+  overflow: hidden;
+  padding: 2rem;
+  width: 90%;
+  transition: max-width 500ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 8px #d3d3d3;
+    cursor: pointer;
+    max-width: 600px;
+  }
+}
+
+.card-wrapper:hover .reveal-details p {
+  display: block;
+}
+
+.card-wrapper:hover .reveal-details img {
+  display: block;
+}
+
+.card-details,
+.reveal-details {
+  /* font-weight: 300; */
+  font-size: 12px;
+}
+
+.student-img {
+    height: 200px;
+    width: 82%;
+}
+
+/* css for alumni stories ends */
   /* css for homepage */
   .intro-div {
     height: 550px;
@@ -1609,6 +1674,9 @@ display: block;
   }
 
   /*css for community-event hover  */
+  .logout form {
+    width: 90%;
+}
   .event-list {
     display: none;
     height: fit-content;
@@ -2359,5 +2427,8 @@ display: block;
   .price-section div h1 {
     text-align: center;
   }
+  .logout form {
+    width: 90%;
+}
 
 }

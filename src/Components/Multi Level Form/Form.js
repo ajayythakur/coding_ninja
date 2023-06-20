@@ -21,7 +21,7 @@ const Form = () => {
     state: "",
     city: "",
     gradYear: "",
-    College: "",
+    college: "",
     degree: "",
     goal: "",
     target_company: ''
@@ -38,7 +38,9 @@ const Form = () => {
   };
 
   const submitData = async (e) => {
+   
     e.preventDefault();
+
     try {
       const res = await axios.post("https://backend-coding-ninja3.onrender.com/classroom_details", {
         name: formData.name,
@@ -56,7 +58,49 @@ const Form = () => {
         goal: formData.goal,
         target_company: formData.target_company,
       })
-      if (res) {
+      if(formData.name.length===0){
+        alert("Name can't be empty");
+      }
+      if(formData.phone.length===0 || formData.phone.length<10){
+        alert("Phone Number is invalid"); 
+      }
+      if(formData.email.length===0){
+        alert("Email can't be empty");
+      }
+      if(formData.gradYear.length===0){
+        alert("Graduation Year can't be empty");
+      }
+      if(formData.college.length===0){
+        alert("College can't be empty");
+      }
+      if(formData.degree.length===0){
+        alert("Degree can't be empty");
+      }
+      if(formData.country.length===0){
+        alert("Country Name can't be empty");
+      }
+      if(formData.state.length===0){
+        alert("State can't be empty");
+      }
+      if(formData.city.length===0){
+        alert("City Name can't be empty");
+      }
+      if(formData.pincode.length===0){
+        alert("Pincode can't be empty");
+      }
+      if(formData.address_one.length===0){
+        alert("Address 1 can't be empty");
+      }
+      if(formData.address_two.length===0){
+        alert("Address 2 can't be empty");
+      }
+      if(formData.goal.length===0){
+        alert("Goal field can't be empty");
+      }
+      if(formData.target_company.length===0){
+        alert("Target Comp can't be empty");
+      }
+      else {
         alert("Data Saved..Thank You !")
         console.log('Data saved', res)
         navigate('/home')
@@ -82,8 +126,8 @@ const Form = () => {
         <button className='next-prev-button'
           onClick={() => {
             if (page === FormTitles.length - 1) {
-              alert("FORM SUBMITTED");
-              console.log(formData);
+              // alert("FORM SUBMITTED");
+              // console.log(formData);
             } else {
               setPage((currPage) => currPage + 1);
             }

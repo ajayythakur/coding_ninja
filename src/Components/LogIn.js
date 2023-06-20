@@ -11,7 +11,7 @@ const LogIn = () => {
 const navigate=useNavigate();
   const submitHandler=async(e)=>{
     e.preventDefault(); 
-    console.log(email,password)
+    // console.log(email,password)
     try {
       if(email.length===0){
         alert("Please Enter Valid Email")
@@ -67,7 +67,7 @@ const navigate=useNavigate();
             <br/>
             <button type='submit' >Proceed</button>
             </form>
-            <div>Not have an account? <Link to='/logout' >Signup</Link></div>
+            <div>Not have an account? <Link to='/register' >Signup</Link></div>
 
 
         </div>

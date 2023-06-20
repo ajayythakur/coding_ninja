@@ -25,6 +25,7 @@ const NavBar = () => {
             <div className='content'>
               <div><h2>What is your work experience?</h2>
                 <span>This will help us recommend the best programs for you.</span></div>
+                <Link className='link2' to='enroll'>
               <div className='cards'>
                 <div className='experience-card one'>
                   <div><img alt='404' src='https://files.codingninjas.com/student-24426.png' /></div>
@@ -37,6 +38,7 @@ const NavBar = () => {
                   <div>Designed as per working professional schedule</div>
                 </div>
               </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -115,10 +117,10 @@ const NavBar = () => {
         </div>
         </Link>
 
-        <div><button className='login-btn'>
+        <Link to='/login'><div><button className='login-btn'>
 
           {
-            !auth?.user ? (<Link to='/login'>Login</Link>) :
+            !auth?.user ? (<>Login</>) :
               (<>
  
                 <span className='links nav-login'>{auth?.user.name}
@@ -134,12 +136,11 @@ const NavBar = () => {
 
         </button>
         </div>
-        <div><button className='enrol-btn'><Link to='/enroll'>Enrol Now</Link></button></div>
+        </Link>
+
+        <Link to='/enroll'>
+        <div><button className='enrol-btn'>Enrol Now</button></div></Link>
       </div>
-
-
-
-
 
 
 
@@ -155,7 +156,7 @@ const NavBar = () => {
                 <img alt='404' className='logo' src='https://files.codingninjas.in/logo_variants-white-25005.png' />
               </div></Link></span>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0"> 
                 <li className="nav-item">
                   <span className="nav-link active" aria-current="page">
                     <div className='links course'>Courses
@@ -268,10 +269,11 @@ const NavBar = () => {
                   </span>
                 </li>
                 <li className="nav-item">
-                  <Link to='/login' className="nav-link"><div><button className='login-btn'>
+                  <Link to='/login' className="nav-link"><div>
+                  <Link to='/login'><button className='login-btn'>
 
 {
-  !auth?.user ? (<Link to='/login'>Login</Link>) :
+  !auth?.user ? (<>Login</>) :
     (<>
 
       <span className='links nav-login'>{auth?.user.name}
@@ -285,11 +287,13 @@ const NavBar = () => {
       </span> 
     </>)}
 
-</button></div>
+</button></Link></div>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <span className="nav-link"><div><button className='enrol-btn'><Link to='/enroll'>Enrol Now</Link></button></div>
+                  <span className="nav-link">
+                    
+                  <Link to='/enroll'><div><button className='enrol-btn'>Enrol Now</button></div></Link>
                   </span>
                 </li>
               </ul>

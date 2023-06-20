@@ -8,6 +8,7 @@ import NoWork from './Courses Pages/NoWork';
 import CallBackQueryForm from './CallBackQueryForm';
 import Footer from './Footer';
 import AluminiStories from './AluminiStories';
+import { Link } from 'react-router-dom';
 
 
 const HomePage = () => { 
@@ -36,7 +37,7 @@ const HomePage = () => {
             </div>
             <p style={{color:'rgb(243,139,29)',fontSize:'40px',fontWeight:'bolder'}}>Be a Coding Ninja</p>
             <h4 style={{color:'rgb(212,225,227)'}}>50,000 Students from 300 colleges have trusted us</h4>
-            <button>Explore Our Program</button>
+            <button><Link className='link' to='/enroll'>Explore Our Program</Link></button>
 
         </div>
         <div className='intro-div-two'>
@@ -66,7 +67,7 @@ const HomePage = () => {
 
         {<AluminiStories/>}
 
-        <div className='why-img'>
+        <div className='why-img'>,
           <img src={hompageImg} alt='404' />
         </div>
 

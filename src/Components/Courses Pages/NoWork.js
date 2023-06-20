@@ -14,13 +14,13 @@ const NoWork = () => {
         .catch(err=>console.log(err));
     },[])
   return (
-    <div className='course-flex'>
+    <div className='course-flex'> 
     <div className='course-container'>
                 {
             data.filter((item)=>item.category==='Web Development').map((n,index)=>{
                 return(
-                    <Link className='link' to='/course-detail' state={n}>
-                    <div key={index} className='course-card'>
+                    <Link key={index} className='link2' to='/course-detail' state={n}>
+                    <div className='course-card'>
                         <div className='card-1'>
                             <div>
                             <div style={{opacity:'.6'}}>{n.type}</div>

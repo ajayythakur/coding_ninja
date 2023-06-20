@@ -2,12 +2,12 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const Logout = () => {
+const Register = () => {
     const [name,setName]=useState('');
     const [email,setEmail]=useState('');
     const [last_name,setLastname]=useState('');
     const [address,setAddress]=useState('');
-    const [age,setAge]=useState(''); 
+    const [age,setAge]=useState('');  
     const [password,setPassword]=useState('');
     const [phone,setPhone]=useState('');
   
@@ -147,4 +147,4 @@ const Logout = () => {
   )
 }
 
-export default Logout
+export default Register
