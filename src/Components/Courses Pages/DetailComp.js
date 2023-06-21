@@ -62,7 +62,7 @@ const DetailComp = () => {
             <h5>
             Rs. {n.early_price}/-
             </h5>
-            <Link className='link' to='/payment-page' onClick={() => {
+            <Link className='link2' to='/payment-page' onClick={() => {
                 setOrder([n]);
                 localStorage.setItem('order', JSON.stringify([n]));
                 console.log("Item Added to Order");
@@ -84,7 +84,7 @@ const DetailComp = () => {
            Rs. {n.price}/-
           
             </h5>
-            <Link className='link' to='/payment-page' onClick={() => {
+            <Link className='link2' to='/payment-page' onClick={() => {
                 setOrder([n]);
                 localStorage.setItem('order', JSON.stringify([n]));
                 console.log("Item Added to Order");

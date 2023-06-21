@@ -359,6 +359,7 @@ body {
   background-color: #032d6b;
   color: white;
   font-family: Mulish;
+  margin-top: 20px;
 }
 
 .footer-logo {
@@ -1271,6 +1272,9 @@ display: block;
   overflow-Y: scroll;
 
 }
+.classroom-form::webkit::-webkit-scrollbar{
+  /* display: none; */
+}
 
 .classroom div img {
   height: 100vh;
@@ -1306,8 +1310,8 @@ display: block;
 }
 
 .personal-details form span input {
-  height: 20px;
-  width: 30px;
+  height: 12px;
+  width: 26px;
 }
 
 .personal-details form input {
@@ -1809,6 +1813,7 @@ display: block;
     font-family: Mulish;
     background-color: #292385;
     display: flex;
+    font-size: 11px;
   }
 
   .ninja-bg {
@@ -1831,22 +1836,21 @@ display: block;
 
   .form-buttons {
     display: flex;
-    background-color: #292385;
-    column-gap: 2%;
-    position: absolute;
-    top: 94%;
-    left: 14%;
+    background-color: transparent;
+    top: 99%;
+    left: 20%;
+    column-gap: 10%;
   }
 
   .next-prev-button {
-    height: 30px;
+    height: 24px;
     font-family: Mulish;
-    width: 150px;
+    width: 101px;
     border-radius: 10px;
     border: none;
     background-color: #f9601e;
     color: white;
-    font-size: 19px;
+    font-size: 14px;
   }
 
   .detail-section {
@@ -2333,11 +2337,11 @@ display: block;
 
   .form-buttons {
     display: flex;
-    background-color: #292385;
+    background-color: transparent;
     column-gap: 90px;
     position: absolute;
-    top: 94%;
-    left: 17%;
+    top: 99%;
+    left: 12%;
   }
 
   .next-prev-button {
